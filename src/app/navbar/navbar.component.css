@@ -1,0 +1,28 @@
+*{
+  font-size: 40px;
+  font-family: 'Quicksand', sans-serif;
+}
+nav{
+  background-color: black;
+}
+h1{
+  font-size: 4vw;
+  font-family: 'Monoton', cursive;
+  color: white;
+  text-shadow: 
+  0 0 5px #7bacff,
+  0 0 10px #7bacff,
+  0 0 20px #7bacff,
+  0 0 40px #7bacff,
+  0 0 80px #7bacff,
+  0 0 90px #7bacff,
+  0 0 100px #7bacff,
+  0 0 150px #7bacff;
+}
+h2{
+  color: #52b2bf;
+  font-family: 'JetBrains Mono', monospace;
+}
+li{
+  margin-left: 200px;
+}
