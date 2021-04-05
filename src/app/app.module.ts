@@ -10,6 +10,7 @@ import { UsersComponent } from './users/users.component';
 import { FetchUserService } from './service/fetch-user.service';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { DatePipe } from './pipes/date.pipe';
+import { ChangeColorDirective } from './directives/change-color.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DatePipe } from './pipes/date.pipe';
     NavbarComponent,
     UsersComponent,
     RepositoriesComponent,
-    DatePipe
+    DatePipe,
+    ChangeColorDirective
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,7 @@ import {MyProfileService} from '../services/my-profile.service';
   styleUrls: ['./landing-page.component.css']
 })
 export class LandingPageComponent implements OnInit {
-
+  color = '#ED4264';
   constructor(private service: MyProfileService) { }
   details: any =[];
   repos: any = [];
