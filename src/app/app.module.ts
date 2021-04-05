@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { UsersComponent } from './users/users.component';
 import { FetchUserService } from './service/fetch-user.service';
 import { RepositoriesComponent } from './repositories/repositories.component';
+import { DatePipe } from './pipes/date.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { RepositoriesComponent } from './repositories/repositories.component';
     LandingPageComponent,
     NavbarComponent,
     UsersComponent,
-    RepositoriesComponent
+    RepositoriesComponent,
+    DatePipe
   ],
   imports: [
     BrowserModule,

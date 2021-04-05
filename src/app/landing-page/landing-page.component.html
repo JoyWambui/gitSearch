@@ -31,8 +31,8 @@
             <p class="card-text">DESCRIPTION: {{repo.description}}</p>
             <p class="card-text">LANGUAGE: {{repo.language}}</p>
             <p class="card-text">FORKS: {{repo.forks}}</p>
-            <p class="card-text">CREATED: {{repo.created_at}}</p>
-            <p class="card-text">UPDATED: {{repo.updated_at}}</p>
+            <p class="card-text">CREATED: {{repo.created_at|date}}</p>
+            <p class="card-text">UPDATED: {{repo.updated_at|date}}</p>
             <a [href]="repo.html_url" class="btn btn-warning">Go To Repository</a>
           </div>
         </div>
