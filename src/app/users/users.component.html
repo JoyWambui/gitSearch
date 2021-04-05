@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <ng-progress></ng-progress>
+  <div class="row">
+    <div class="col-md-12">
+      <form>
+        <div class="input-group">
+          <input type="text" #user class="form-control form-control-lg" placeholder="Input User" aria-label="Input User"
+            aria-describedby="searchUser">
+          <div class="input-group-append">
+            <button (click)='getUser(user)' class="btn btn-info" type="button" id="searchUser">Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-6" >
+      <div  class="card" *ngFor='let result of service.results'>
+        <ul  class="list-group">
+          <li class="list-group-item " id="image"><img [src]="result.avatar" alt="USER's AVATAR"></li>
+          <li class="list-group-item">USERNAME: {{result.name}}</li>
+          <li class="list-group-item">USER ID: {{result.id}}</li>
+          <li class="list-group-item">PROFILE LINK: <a [href]="result.repo">My Profile</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
