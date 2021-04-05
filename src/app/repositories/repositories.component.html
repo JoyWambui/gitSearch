@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <form>
+        <div class="input-group">
+          <input type="text" #userSearch class="form-control form-control-lg" placeholder="Input userSearch"
+            aria-label="Input userSearch" aria-describedby="searchUser">
+          <div class="input-group-append">
+            <button (click)='getUser(userSearch)' class="btn btn-info" type="button" id="searchUser">Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
