@@ -6,5 +6,5 @@ export class UserProfile {
   public repos: number,
   public followers: number,
   public following: number,
-  public created : Date)  {}
+  public created : Date ) {}
 }
