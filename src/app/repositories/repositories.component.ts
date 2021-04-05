@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FetchUserService} from '../service/fetch-user.service';
+import {RepoList} from '../repo-list';
 
 @Component({
   selector: 'app-repositories',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RepositoriesComponent implements OnInit {
 
-  constructor() { }
+  repoResult!: RepoList;
+
+  fetchRepo(repo: HTMLInputElement){
+   this.service.getRepo(`${repo.value}`);
+
+  }
+  constructor(public service:FetchUserService) { }
+  
 
   ngOnInit(): void {
+    this.repoResult = this.service.repoResult
+
   }
 
 }

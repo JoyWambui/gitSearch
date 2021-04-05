@@ -8,3 +8,5 @@ export class UserProfile {
   public following: number,
   public created : Date ) {}
 }
+
+

@@ -3,13 +3,31 @@
     <div class="col-md-12">
       <form>
         <div class="input-group">
-          <input type="text" #userSearch class="form-control form-control-lg" placeholder="Input userSearch"
+          <input type="text" #repo class="form-control form-control-lg" placeholder="Search Repositories..."
             aria-label="Input userSearch" aria-describedby="searchUser">
           <div class="input-group-append">
-            <button (click)='getUser(userSearch)' class="btn btn-info" type="button" id="searchUser">Search</button>
+            <button (click)='fetchRepo(repo)' class="btn btn-info" type="button" id="searchUser">Search</button>
           </div>
         </div>
       </form>
     </div>
   </div>
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="card" *ngFor='let result of service.results'>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><img [src]="result.avatar" alt="User's Avatar"></li>
+          <li class="list-group-item">USER: {{result.usersName}}</li>
+          <li class="list-group-item">REPO NAME: {{result.repoName}}</li>
+          <li class="list-group-item">DESCRIPTION: {{result.description}}</li>
+          <li class="list-group-item">LANGUAGE: {{result.language}}</li>
+          <li class="list-group-item">FORKS: {{result.fork}}</li>
+          <li class="list-group-item">CREATED: {{result.createdDate}}</li>
+          <li class="list-group-item">UPDATED: {{result.updatedDate}}</li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
 </div>
