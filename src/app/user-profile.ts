@@ -1,3 +1,10 @@
 export class UserProfile {
-  constructor(public avatar: any, public username: string, public repo: string, public followers: string, public following: string){}
+  constructor(
+  public avatar: string,
+  public name: string,
+  public bio: string,
+  public repos: number,
+  public followers: number,
+  public following: number,
+  public created : Date)  {}
 }
