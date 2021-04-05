@@ -3,6 +3,7 @@ export class RepoList {
     public usersName:string,
     public avatar: string,
     public repoName: string,
+    public repoLink: string,
     public description: string,
     public language: string,
     public fork: number,

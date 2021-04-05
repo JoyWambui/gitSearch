@@ -22,7 +22,7 @@ export class FetchUserService {
 
   constructor(private http: HttpClient) {
     this.userSearch = new UserProfile("","","",0,0,0,new Date)
-    this.repoResult = new RepoList("","","","","",0,new Date,new Date)
+    this.repoResult = new RepoList("","","","","","",0,new Date,new Date)
     this.results =[];
   }
 
@@ -64,6 +64,7 @@ export class FetchUserService {
               repoResult.owner.login,
               repoResult.owner.avatar_url,
               repoResult.name,
+              repoResult.html_url,
               repoResult.description,
               repoResult.language,
               repoResult.forks,

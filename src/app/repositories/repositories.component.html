@@ -18,7 +18,7 @@
         <ul class="list-group list-group-flush">
           <li class="list-group-item"><img [src]="result.avatar" alt="User's Avatar"></li>
           <li class="list-group-item">USER: {{result.usersName}}</li>
-          <li class="list-group-item">REPO NAME: {{result.repoName}}</li>
+          <li class="list-group-item"> REPO NAME: <a [href]="result.repoLink">{{result.repoName}}</a></li>
           <li class="list-group-item">DESCRIPTION: {{result.description}}</li>
           <li class="list-group-item">LANGUAGE: {{result.language}}</li>
           <li class="list-group-item">FORKS: {{result.fork}}</li>
