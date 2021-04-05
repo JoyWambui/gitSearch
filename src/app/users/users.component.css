@@ -1,7 +1,33 @@
+.container-fluid{
+  background-image:linear-gradient(to right, #536976,#292E49) ;
+}
+img{
+  border: solid black 2px;
+  border-radius: 50%;
+  width: 50%;
+}
+#image{
+text-align: center;
+border-left: 0px ;
+}
 .input-group{
   margin-top: 15px;
 }
 button{
   width: 10em;
   font-size: 1.2em;
+}
+ul{
+  margin: 3em;
+
+}
+.card{
+  margin: 1em 0em;
+  background-image: linear-gradient(to right, #9796f0,#fbc7d4);
+}
+li{
+  background-image: linear-gradient(to right, #9796f0,#fbc7d4);
+  border: 0px;
+  border-left: solid black 8px;
+  margin: 0.5em;
 }

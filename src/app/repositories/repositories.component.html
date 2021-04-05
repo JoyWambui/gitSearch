@@ -13,10 +13,10 @@
     </div>
   </div>
   <div class="row justify-content-center">
-    <div class="col-md-10">
+    <div class="col-md-6">
       <div class="card" *ngFor='let repoResult of service.repoResults'>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item"><img [src]="repoResult.avatar" alt="User's Avatar"></li>
+        <ul class="list-group">
+          <li class="list-group-item" id="image"><img [src]="repoResult.avatar" alt="User's Avatar"></li>
           <li class="list-group-item">USER: {{repoResult.usersName}}</li>
           <li class="list-group-item"> REPO NAME: <a [href]="repoResult.repoLink">{{repoResult.repoName}}</a></li>
           <li class="list-group-item">DESCRIPTION: {{repoResult.description}}</li>

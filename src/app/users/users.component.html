@@ -12,11 +12,11 @@
       </form>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-10" >
+  <div class="row justify-content-center">
+    <div class="col-md-6" >
       <div class="card" *ngFor='let result of service.results'>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item"><img [src]="result.avatar" alt="USER's AVATAR"></li>
+        <ul class="list-group">
+          <li class="list-group-item " id="image"><img [src]="result.avatar" alt="USER's AVATAR"></li>
           <li class="list-group-item">USERNAME: {{result.name}}</li>
           <li class="list-group-item">USER ID: {{result.id}}</li>
           <li class="list-group-item">PROFILE LINK: <a [href]="result.repo">My Profile</a></li>
