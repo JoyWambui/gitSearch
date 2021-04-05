@@ -13,6 +13,7 @@ import { FetchUserService } from './service/fetch-user.service';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { DatePipe } from './pipes/date.pipe';
 import { ChangeColorDirective } from './directives/change-color.directive';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ChangeColorDirective } from './directives/change-color.directive';
     UsersComponent,
     RepositoriesComponent,
     DatePipe,
-    ChangeColorDirective
+    ChangeColorDirective,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
