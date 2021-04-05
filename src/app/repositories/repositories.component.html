@@ -14,16 +14,16 @@
   </div>
   <div class="row justify-content-center">
     <div class="col-md-10">
-      <div class="card" *ngFor='let result of service.results'>
+      <div class="card" *ngFor='let repoResult of service.repoResults'>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item"><img [src]="result.avatar" alt="User's Avatar"></li>
-          <li class="list-group-item">USER: {{result.usersName}}</li>
-          <li class="list-group-item"> REPO NAME: <a [href]="result.repoLink">{{result.repoName}}</a></li>
-          <li class="list-group-item">DESCRIPTION: {{result.description}}</li>
-          <li class="list-group-item">LANGUAGE: {{result.language}}</li>
-          <li class="list-group-item">FORKS: {{result.fork}}</li>
-          <li class="list-group-item">CREATED: {{result.createdDate}}</li>
-          <li class="list-group-item">UPDATED: {{result.updatedDate}}</li>
+          <li class="list-group-item"><img [src]="repoResult.avatar" alt="User's Avatar"></li>
+          <li class="list-group-item">USER: {{repoResult.usersName}}</li>
+          <li class="list-group-item"> REPO NAME: <a [href]="repoResult.repoLink">{{repoResult.repoName}}</a></li>
+          <li class="list-group-item">DESCRIPTION: {{repoResult.description}}</li>
+          <li class="list-group-item">LANGUAGE: {{repoResult.language}}</li>
+          <li class="list-group-item">FORKS: {{repoResult.fork}}</li>
+          <li class="list-group-item">CREATED: {{repoResult.createdDate}}</li>
+          <li class="list-group-item">UPDATED: {{repoResult.updatedDate}}</li>
 
         </ul>
       </div>

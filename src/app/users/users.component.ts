@@ -9,19 +9,15 @@ import {UserProfile} from '../user-profile'
 })
 export class UsersComponent implements OnInit {
 
-  userSearch!: UserProfile 
-    
+  userResult!: UserProfile 
   
-  results! : any[];
-  
-  
-  constructor(public userService: FetchUserService) { }
+    constructor(public service: FetchUserService) { }
     getUser(user:HTMLInputElement){
-      return this.userService.fetchUsers(`${user.value}`)
+      return this.service.fetchUsers(`${user.value}`)
       
     }
   ngOnInit(): void {
-    this.userSearch = this.userService.userSearch
+    this.userResult = this.service.userResult
   }
 
 }

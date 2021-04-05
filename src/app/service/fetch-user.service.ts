@@ -12,40 +12,41 @@ import {RepoList} from '../repo-list';
 export class FetchUserService {
 
   token: string = environment.apiKey;
-  userUrl: string = 'https://api.github.com/users/';
+  userUrl: string = 'https://api.github.com/search/users?q=';
   repoUrl: string = 'https://api.github.com/search/repositories?q='
   pages: string = '&per_page=20'
-  userSearch: UserProfile;
+  userResult: UserProfile;
   repoResult: RepoList;
   results: any;
+  repoResults: any;
 ;
 
   constructor(private http: HttpClient) {
-    this.userSearch = new UserProfile("","","",0,0,0,new Date)
+    this.userResult = new UserProfile("","",0,"")
     this.repoResult = new RepoList("","","","","","",0,new Date,new Date)
     this.results =[];
+    this.repoResults =[];
   }
 
 
   fetchUsers(search: string) {
     let promise = new Promise<void>((resolve, reject) => {
-      this.http.get(this.userUrl+search+'?'+this.token).toPromise().then(
-        (response:any) => {
-          new UserProfile(
-            this.userSearch.avatar= response.avatar_url,
-            this.userSearch.name= response.name,
-            this.userSearch.bio= response.bio,
-            this.userSearch.repos= response.public_repos,
-            this.userSearch.followers= response.followers,
-            this.userSearch.following= response.following,
-            this.userSearch.created= response.created_at
-          )
-          
-          
-
-          console.log(response
+      let completeUserUrl = this.userUrl+search+this.pages+this.token
+      this.http.get(completeUserUrl).toPromise().then(
+        (res:any) => {
+          this.results= res.items.map((userResult:any)=>{
+            return new UserProfile(
+              userResult.avatar_url,
+              userResult.login,
+              userResult.id,
+              userResult.html_url,
             )
+  
+          });
           resolve();
+
+          console.log(res.items
+            )
         },
         err =>{
           reject(err);
@@ -56,10 +57,10 @@ export class FetchUserService {
   }
   getRepo(term:string){
     let promise = new Promise<void>((resolve, reject)=>{
-      let completeRepoUrl= this.repoUrl+term+this.pages+'&'+this.token
+      let completeRepoUrl= this.repoUrl+term+this.pages+this.token
       this.http.get(completeRepoUrl).toPromise().then(
         (res:any)=>{
-          this.results =res.items.map((repoResult:any)=>{
+          this.repoResults =res.items.map((repoResult:any)=>{
             return new RepoList(
               repoResult.owner.login,
               repoResult.owner.avatar_url,
