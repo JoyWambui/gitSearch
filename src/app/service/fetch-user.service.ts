@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { environment } from '../../environments/environment'
+import { environment } from '../../environments/environment.prod'
 import { HttpClient } from '@angular/common/http';
 import { UserProfile } from '../user-profile';
 import {RepoList} from '../repo-list';
@@ -11,10 +11,6 @@ import {RepoList} from '../repo-list';
 })
 export class FetchUserService {
 
-  token: string = environment.apiKey;
-  userUrl: string = 'https://api.github.com/search/users?q=';
-  repoUrl: string = 'https://api.github.com/search/repositories?q='
-  pages: string = '&per_page=20'
   userResult: UserProfile;
   repoResult: RepoList;
   results: any;
@@ -31,7 +27,7 @@ export class FetchUserService {
 
   fetchUsers(search: string) {
     let promise = new Promise<void>((resolve, reject) => {
-      let completeUserUrl = this.userUrl+search+this.pages+this.token
+      let completeUserUrl = `https://api.github.com/search/users?q=${search}&per_page=20&access_token=${environment.apiKey}`
       this.http.get(completeUserUrl).toPromise().then(
         (res:any) => {
           this.results= res.items.map((userResult:any)=>{
@@ -57,7 +53,7 @@ export class FetchUserService {
   }
   getRepo(term:string){
     let promise = new Promise<void>((resolve, reject)=>{
-      let completeRepoUrl= this.repoUrl+term+this.pages+this.token
+      let completeRepoUrl= `https://api.github.com/search/repositories?q=${term}&per_page=20&access_token=${environment.apiKey}`
       this.http.get(completeRepoUrl).toPromise().then(
         (res:any)=>{
           this.repoResults =res.items.map((repoResult:any)=>{

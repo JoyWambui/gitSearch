@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  apiKey: '&access_token=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'
+  apiKey: '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'
 
 };
