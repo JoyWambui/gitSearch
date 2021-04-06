@@ -6,7 +6,7 @@
    * Click on the link below
    * Click on the link in the About section.
 ## Link to Live Site
- [ QuotesCentral](https://joywambui.github.io/githubSearch/)
+ [ GitSearch](https://joywambui.github.io/githubSearch/)
 ## License
  Project licensed under [MIT License](https://github.com/JoyWambui/githubSearch/blob/master/LICENSE)
 
