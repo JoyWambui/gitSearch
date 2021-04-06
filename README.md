@@ -8,6 +8,6 @@
 ## Link to Live Site
  [ GitSearch](https://joywambui.github.io/githubSearch/)
 ## License
- Project licensed under [MIT License](https://github.com/JoyWambui/githubSearch/blob/master/LICENSE)
+ Project licensed under [MIT License](https://github.com/JoyWambui/gitSearch/blob/master/LICENSE)
 
  Copyright (c) 2021 **JoyWambui**
